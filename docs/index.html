@@ -1,15 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Games Comparison</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f6fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #3a7bd5, #3a6073);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h2 {
+      font-size: 1.1rem;
+      margin: 0 0 0.5rem 0;
+      color: #2d3436;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0 0 1rem 0;
+      line-height: 1.4;
+    }
+
+    .card-content a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #3a7bd5;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      transition: background 0.2s ease;
+    }
+
+    .card-content a:hover {
+      background: #315f9e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #888;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body>
-    <a href="v1-deepseek-no-refinement.html">Deepseek no meta prompt</a>
-    <a href="v2-chatgpt-5.html">Chatgpt 5</a>
-    <a href="v2-claude-sonet4.5.html">Calude sonet 4.5</a>
-    <a href="v2-deepseek-with-meta-prompt.html">Deepseek with meta</a>
-    <a href="v2-gemini-2.5flash.html">Gemeni 2.5</a>
+  <header>
+    <h1>AI Game Variants</h1>
+    <p>All generated from the same base prompt — explore and compare results.</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <img src="img/v1-deepseek-no-refinement.png" alt="Deepseek No Meta Prompt">
+      <div class="card-content">
+        <h2>Deepseek (No Meta Prompt)</h2>
+        <p>A baseline generation by Deepseek without refinement or meta guidance.</p>
+        <a href="v1-deepseek-no-refinement.html">View Version</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/v2-chatgpt-5.png" alt="ChatGPT 5">
+      <div class="card-content">
+        <h2>ChatGPT 5</h2>
+        <p>ChatGPT-5’s interpretation of the same game prompt — balanced and coherent.</p>
+        <a href="v2-chatgpt-5.html">View Version</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/v2-claude-sonet4.5.png" alt="Claude Sonet 4.5">
+      <div class="card-content">
+        <h2>Claude Sonet 4.5</h2>
+        <p>Claude’s artistic and structured output with advanced contextual reasoning.</p>
+        <a href="v2-claude-sonet4.5.html">View Version</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/v2-deepseek-with-meta-prompt.png" alt="Deepseek With Meta Prompt">
+      <div class="card-content">
+        <h2>Deepseek (With Meta Prompt)</h2>
+        <p>Deepseek’s refined version with explicit meta-prompting for enhanced structure.</p>
+        <a href="v2-deepseek-with-meta-prompt.html">View Version</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/v2-gemini-2.5flash.png" alt="Gemini 2.5 Flash">
+      <div class="card-content">
+        <h2>Gemini 2.5 Flash</h2>
+        <p>Google Gemini’s fast generation variant, focusing on clarity and brevity.</p>
+        <a href="v2-gemini-2.5flash.html">View Version</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 AI Games Experiment by Stoyan
+  </footer>
 </body>
 </html>
